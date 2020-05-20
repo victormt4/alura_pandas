@@ -14,3 +14,9 @@ tipos_residenciais = ['Quitinete', 'Casa', 'Apartamento', 'Casa de Condomínio',
 dados_residenciais = dataset[dataset['Tipo'].isin(tipos_residenciais)]
 
 dados_residenciais.index = range(dados_residenciais.shape[0])
+
+# exportando novo dataset
+dados_residenciais.to_csv('./data/aluguel_residencial.csv', sep=';', index=False)
+
+dados_residenciais = pd.read_csv('./data/aluguel_residencial.csv', sep=';')
+print(dados_residenciais.info())
