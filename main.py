@@ -13,5 +13,4 @@ tipos_residenciais = ['Quitinete', 'Casa', 'Apartamento', 'Casa de Condomínio',
 # Filtrando resultados
 dados_residenciais = dataset[dataset['Tipo'].isin(tipos_residenciais)]
 
-print(len(dataset))
-print(len(dataset['Tipo'].isin(tipos_residenciais)))
+dados_residenciais.index = range(dados_residenciais.shape[0])
